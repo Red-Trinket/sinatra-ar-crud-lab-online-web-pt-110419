@@ -47,7 +47,7 @@ describe "Magazine App" do
       it "displays all the articles" do
         get "/articles"
         expect(last_response.body).to include(article_title)
-        expect(last_response.body).to include(@article2.title)
+        expect(last_response.body).to include("Sinatra")
       end
     end
 
