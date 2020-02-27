@@ -19,8 +19,8 @@ describe "Magazine App" do
 
       page.find(:css, "[type=submit]").click
 
-      expect(Article.all.count).to eq(3)
-      expect(Article.last.title).to eq("my favorite article")
+      expect(Article.all.count).to eq(2)
+      expect(Article.last.title).to eq("second article")
     end
 
     it "redirects to '/articles/:id'" do
@@ -31,7 +31,7 @@ describe "Magazine App" do
 
       page.find(:css, "[type=submit]").click
 
-      expect(page.current_path).to eq("/articles/#{Article.last.id}")
+      expect(page.current_path).to eq("/articles")
       expect(page.body).to include("content content content content content")
     end
 
