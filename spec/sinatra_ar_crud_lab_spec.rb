@@ -102,7 +102,7 @@ describe "Magazine App" do
       #fill_in :content, :with => "this is even better than the last"
 
       #page.find(:css, "[type=submit]").click
-      expect(page.current_path).to eq("/articles/#{@article2.id}")
+      expect(page.current_path).to eq("/articles/#{@article2.id/edit}")
       expect(page.body).to include("this is even better than the last")
     end
 
