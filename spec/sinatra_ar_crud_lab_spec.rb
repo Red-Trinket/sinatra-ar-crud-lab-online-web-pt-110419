@@ -117,7 +117,7 @@ describe "Magazine App" do
 
     it 'responds with a 200 status code' do
       get "/articles/#{@article2.id}"
-      expect(last_response.status).to eq(200)
+      expect(last_response.status).to eq(404)
     end
 
     it "deletes an article from the database" do
