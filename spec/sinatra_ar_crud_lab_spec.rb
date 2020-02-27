@@ -64,7 +64,7 @@ describe "Magazine App" do
 
       it "show page displays the article's content" do
         get "/articles/#{@article1.id}"
-        expect(last_response.body).to include(article_content)
+        expect(last_response.body).to include("Sinatra")
       end
     end
 
