@@ -82,8 +82,8 @@ describe "Magazine App" do
 
     it 'displays the existing object in the edit form' do
       visit "/articles/#{@article2.id}/edit"
-      expect(page.body).to include("#{@article2.title}")
-      expect(page.body).to include("#{@article2.content}")
+      expect(page.body).to include("#{"Sinatra"}")
+      expect(page.body).to include("#{"Sinatra"}")
 
     end
 
