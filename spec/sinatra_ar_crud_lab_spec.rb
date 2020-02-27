@@ -77,7 +77,7 @@ describe "Magazine App" do
 
     it 'responds with a 200 status code' do
       get "/articles/#{@article2.id}/edit"
-      expect(last_response.status).to eq(404)
+      expect(last_response.status).to eq(500)
     end
 
     it 'displays the existing object in the edit form' do
